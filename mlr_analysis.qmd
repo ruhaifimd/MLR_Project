@@ -1,0 +1,353 @@
+---
+title: "Multiple Logistic Regression"
+format: html
+editor: visual
+execute:
+      warning: false
+---
+
+## **Workflow**
+
+-   Introduction
+
+-   Methodology
+
+-   Prepare data
+
+-   Research question
+
+-   Variable selection
+
+-   Read data
+
+-   View data
+
+-   Describe data
+
+-   Explore data
+
+-   Estimation
+
+-   Model selection
+
+-   Prediction
+
+-   Model checking
+
+-   Presentation
+
+-   Interpretation
+
+---
+
+## **Introduction**
+
+We intend to analyze data related to cardiac features of patients from the "heart.xlsx" dataset. This dataset provides various information about patients, including age, gender, chest pain type, blood pressure, cholesterol levels, resting electrocardiographic (ECG) features, and more. We will attempt to create multivariate model to pinpoint the risk factors of heart disease as well as predict overall risk.
+
+---
+
+## **Methodology**
+
+We will use multiple logistic regression model approach to analyse predictors to explain variation of CHD in sample population. Variables will be selected based on a Directed Acyclic Graph (DAG). Following variable selection, the first model will consist of a univariate analysis of the selected variables. Second model consists of multivariate of the selected variables and another model will be constructed by adding interaction term between age and gender as there might be a non-additive effect of age and gender on the likelihood of CHD, meaning the combined effect of these two variables is not simply the sum of their separate effects. Model comparison will be executed using anova test to select the final model. Model assessment will be conducted by running the diagnostic plot and checking the model for any influential observation before final model is concluded.
+
+---
+
+## **Prepare Data**
+
+```{r}
+library(tidyverse)
+library(broom)
+library(readr)
+library(gtsummary)
+library(corrplot)
+library(caret)
+library(mfp)
+library(ggplot2)
+library(generalhoslem)
+library(ResourceSelection)
+library(dagitty)
+library(DescTools)
+library(dplyr)
+library(knitr)
+```
+
+---
+
+## **Research Question**
+
+Is there any association between age, gender, chest pain type, resting blood pressure, cholesterol level, resting ECG, and exercise-induced angina with CHD in an adult population?
+
+---
+
+## **Variable Selection**
+
+```{r}
+# Load the dagitty package
+library(dagitty)
+
+# Define the DAG
+DAG <- dagitty ('dag {
+chest pain type [pos="0.622,0.140"]
+cholesterol level [pos="0.224,0.384"]
+exercise-induced angina [pos="0.802,0.274"]
+resting BP [pos="0.408,0.519"]
+resting ECG [pos="0.591,0.586"]
+CHD [pos="0.816,0.467"]
+age [pos="0.263,0.120"]
+gender [pos="0.471,0.140"]
+chest pain type -> exercise-induced angina
+chest pain type -> resting ECG
+chest pain type -> CHD
+cholesterol level -> CHD
+exercise-induced angina -> CHD
+resting BP -> resting ECG
+resting BP -> CHD
+resting ECG -> CHD
+age -> cholesterol level
+age -> resting BP
+age -> CHD
+gender -> cholesterol level
+gender -> resting BP
+gender -> CHD
+}')
+
+# Visualize the DAG
+plot(DAG)
+
+```
+
+## **Read Data**
+
+```{r}
+library(readxl)
+CHD <- read_excel("heart.xlsx")
+```
+
+---
+
+## **View Data**
+
+```{r}
+library(dplyr)
+glimpse(CHD)
+```
+
+---
+
+## **Describe Data**
+
+### **Convert "character" into "factor" variable**
+
+```{r}
+library(haven)
+CHD<- 
+CHD %>%
+  mutate(across(where(is.character), as_factor))
+
+summary(CHD)
+```
+
+---
+
+## **Explore Data**
+
+For **continuous data**: We employ histograms to gain insight into the distribution of each feature. This allows us to understand the central tendency, spread, and shape of the dataset's distribution.
+
+1.  age
+
+    ```{r}
+    ggplot(CHD, aes(x = age, fill = factor(CHD))) + 
+      geom_histogram(bins = 30, alpha = 0.7, position = "identity") + 
+      facet_wrap(~ CHD) +
+      labs(title = "Age Distribution by CHD Status", 
+           x = "Age", 
+           y = "Count", 
+           fill = "CHD Status") +
+      theme_minimal()
+    ```
+
+2.  resting blood pressure
+
+    ```{r}
+    ggplot(CHD, aes(x = blood_pressure, fill = factor(CHD))) + 
+      geom_histogram(bins = 30, alpha = 0.7, position = "identity") + 
+      facet_wrap(~ CHD) +
+      labs(title = "Resting Blood Pressure Distribution by CHD Status", 
+           x = "Resting Blood Pressure", 
+           y = "Count", 
+           fill = "CHD Status") +
+      theme_minimal()
+    ```
+
+3.  cholesterol level
+
+    ```{r}
+    ggplot(CHD, aes(x = chol, fill = factor(CHD))) + 
+      geom_histogram(bins = 30, alpha = 0.7, position = "identity") + 
+      facet_wrap(~ CHD) +
+      labs(title = "Resting Blood Pressure Distribution by CHD Status", 
+           x = "Cholesterol level", 
+           y = "Count", 
+           fill = "CHD Status") +
+      theme_minimal()
+    ```
+
+---
+
+For **categorical data**: Bar plots are utilized to visualize the frequency of each category. This provides a clear representation of the prominence of each category within the respective feature.
+
+1.  gender
+
+    ```{r}
+    ggplot(CHD, aes(x = gender, fill  = CHD)) + 
+      geom_bar(position = "dodge", alpha = 0.8) + 
+      facet_wrap(~ factor(CHD), nrow = 1) +
+      labs(title = "Gender Distribution by CHD Status", 
+           x = "Gender", 
+           y = "Count", 
+           fill = "CHD Status") +
+      theme_minimal()
+    ```
+
+2.  chest pain type
+
+    ```{r}
+    ggplot(CHD, aes(x = chest_pain_type, fill  = CHD)) + 
+      geom_bar(position = "dodge", alpha = 0.8) + 
+      facet_wrap(~ factor(CHD), nrow = 5) +
+      labs(title = "Chest pain type Distribution by CHD Status", 
+           x = "Chest Pain Type", 
+           y = "Count", 
+           fill = "CHD Status") +
+      theme_minimal()
+    ```
+
+3.  resting ECG
+
+    ```{r}
+    ggplot(CHD, aes(x = resting_ecg, fill  = CHD)) + 
+      geom_bar(position = "dodge", alpha = 0.8) + 
+      facet_wrap(~ factor(CHD), nrow = 2) +
+      labs(title = "Resting ECG Distribution by CHD Status", 
+           x = "Resting ECG", 
+           y = "Count", 
+           fill = "CHD Status") +
+      theme_minimal()
+    ```
+
+4.  exercise-induce angina
+
+    ```{r}
+    ggplot(CHD, aes(x = exercise_induced_angina, fill  = CHD)) + 
+      geom_bar(position = "dodge", alpha = 0.8) + 
+      facet_wrap(~ factor(CHD), nrow = 1) +
+      labs(title = "Exercise-induced angina Distribution by CHD Status", 
+           x = "Exercise-induced Angina", 
+           y = "Count", 
+           fill = "CHD Status") +
+      theme_minimal()
+    ```
+
+---
+
+## **Estimation**
+
+### **Univariate Analysis**
+
+1.  age (age)
+
+    ```{r}
+    SLR.age <- glm(CHD ~ age,
+                   data = CHD,
+                   family = binomial)
+    summary(SLR.age)
+    ```
+
+2.  gender (gender)
+
+    ```{r}
+    SLR.gender <- glm(CHD ~ gender,
+                      data = CHD,
+                      family = binomial)
+
+    summary(SLR.gender)
+    ```
+
+3.  chest pain type (chest_pain_type)
+
+    ```{r}
+    SLR.chest_pain <- glm(CHD ~ chest_pain_type,
+                          data = CHD,
+                          family = binomial)
+
+    summary(SLR.chest_pain)
+    ```
+
+4.  resting blood pressure (blood_pressure)
+
+    ```{r}
+    SLR.bp <- glm(CHD ~ blood_pressure,
+                  data = CHD,
+                  family = binomial)
+
+    summary(SLR.bp)
+    ```
+
+5.  cholesterol level (chol)
+
+    ```{r}
+    SLR.chol <- glm(CHD ~ chol,
+                    data = CHD,
+                    family = binomial)
+
+    summary(SLR.chol)
+    ```
+
+6.  resting ECG (resting_ecg)
+
+    ```{r}
+    SLR.ecg <- glm(CHD ~ resting_ecg,
+                   data = CHD,
+                   family = binomial)
+
+    summary(SLR.ecg)
+    ```
+
+7.  exercise-induced angina (exercise_induced_angina)
+
+    ```{r}
+    SLR.angina <- glm(CHD ~ exercise_induced_angina,
+                      data = CHD,
+                      family = binomial)
+
+    summary(SLR.angina)
+    ```
+
+```{r}
+#create a summary table for each model with confidence intervals
+tbl_age <- tbl_regression(SLR.age, exponentiate = TRUE, conf.level = 0.95)
+
+tbl_gender <- tbl_regression(SLR.gender, exponentiate = TRUE, conf.level = 0.95)
+
+tbl_chest_pain <- tbl_regression(SLR.chest_pain, exponentiate = TRUE, conf.level = 0.95)
+
+tbl_bp <- tbl_regression(SLR.bp, exponentiate = TRUE, conf.level = 0.95)
+
+tbl_chol <- tbl_regression(SLR.chol, exponentiate = TRUE, conf.level = 0.95)
+
+tbl_ecg <- tbl_regression(SLR.ecg, exponentiate = TRUE, conf.level = 0.95)
+
+tbl_angina <- tbl_regression(SLR.angina, exponentiate = TRUE, conf.level = 0.95)
+
+#Combine all tables into one
+SLR_table <- tbl_stack(
+  list(tbl_age, tbl_gender, tbl_chest_pain, tbl_bp, tbl_chol, tbl_ecg, tbl_angina)
+) %>%
+  as_gt() %>%
+  gt::tab_header(
+    title = "Simple Logistic Regression Model"
+  )
+
+#Print the summary table
+SLR_table
+```
