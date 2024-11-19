@@ -38,19 +38,19 @@ execute:
 
 -   Interpretation
 
----
+------------------------------------------------------------------------
 
 ## **Introduction**
 
 We intend to analyze data related to cardiac features of patients from the "heart.xlsx" dataset. This dataset provides various information about patients, including age, gender, chest pain type, blood pressure, cholesterol levels, resting electrocardiographic (ECG) features, and more. We will attempt to create multivariate model to pinpoint the risk factors of heart disease as well as predict overall risk.
 
----
+------------------------------------------------------------------------
 
 ## **Methodology**
 
 We will use multiple logistic regression model approach to analyse predictors to explain variation of CHD in sample population. Variables will be selected based on a Directed Acyclic Graph (DAG). Following variable selection, the first model will consist of a univariate analysis of the selected variables. Second model consists of multivariate of the selected variables and another model will be constructed by adding interaction term between age and gender as there might be a non-additive effect of age and gender on the likelihood of CHD, meaning the combined effect of these two variables is not simply the sum of their separate effects. Model comparison will be executed using anova test to select the final model. Model assessment will be conducted by running the diagnostic plot and checking the model for any influential observation before final model is concluded.
 
----
+------------------------------------------------------------------------
 
 ## **Prepare Data**
 
@@ -71,13 +71,13 @@ library(dplyr)
 library(knitr)
 ```
 
----
+------------------------------------------------------------------------
 
 ## **Research Question**
 
 Is there any association between age, gender, chest pain type, resting blood pressure, cholesterol level, resting ECG, and exercise-induced angina with CHD in an adult population?
 
----
+------------------------------------------------------------------------
 
 ## **Variable Selection**
 
@@ -123,7 +123,7 @@ library(readxl)
 CHD <- read_excel("heart.xlsx")
 ```
 
----
+------------------------------------------------------------------------
 
 ## **View Data**
 
@@ -132,7 +132,7 @@ library(dplyr)
 glimpse(CHD)
 ```
 
----
+------------------------------------------------------------------------
 
 ## **Describe Data**
 
@@ -147,7 +147,7 @@ CHD %>%
 summary(CHD)
 ```
 
----
+------------------------------------------------------------------------
 
 ## **Explore Data**
 
@@ -192,7 +192,7 @@ For **continuous data**: We employ histograms to gain insight into the distribut
       theme_minimal()
     ```
 
----
+------------------------------------------------------------------------
 
 For **categorical data**: Bar plots are utilized to visualize the frequency of each category. This provides a clear representation of the prominence of each category within the respective feature.
 
@@ -248,7 +248,7 @@ For **categorical data**: Bar plots are utilized to visualize the frequency of e
       theme_minimal()
     ```
 
----
+------------------------------------------------------------------------
 
 ## **Estimation**
 
