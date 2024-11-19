@@ -1,10 +1,22 @@
 ---
-title: "Multiple Logistic Regression"
+title: "Assignment Multiple Logistic Regression"
 format: html
 editor: visual
 execute:
       warning: false
 ---
+
+## Group Members:
+
+1\) Muhammad Ruhaifi bin Muhammad Sabri (22305762)
+
+2\) Dzul Hairy bin Mohd Ramlan (22305758)
+
+3\) Nur Shuhaiza binti Supian (22306056)
+
+4\) Aziemah binti Nafsun (22305774)
+
+5\) Noor Nazli bt Din (22306061)
 
 ## **Workflow**
 
@@ -351,3 +363,49 @@ SLR_table <- tbl_stack(
 #Print the summary table
 SLR_table
 ```
+
+---
+
+### **Multiple Logistic Regression Without Interaction Model (Model A) -dzul**
+
+---
+
+### **Multiple Logistic Regression With Interaction Model (Model B) -dzul**
+
+---
+
+## **Model Selection -shu**
+
+---
+
+## **Multicollinearity checking -shu**
+
+---
+
+## **Prediction -shu**
+
+---
+
+## **Model Checking - nazli**
+
+1\) Overall fitness (accuracy, sensitivity,specificity)
+
+2\) Hosmer-Lemeshow test
+
+3\) Area under ROC
+
+---
+
+## **Presentation - kak mah**
+
+1\) Descriptive analysis
+
+2\) Univariate table
+
+3\) Multivariate table
+
+4\) Final table
+
+---
+
+## **Interpretation - semua kita bincang**
