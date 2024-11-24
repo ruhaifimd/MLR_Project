@@ -366,11 +366,29 @@ SLR_table
 
 ------------------------------------------------------------------------
 
-### **Multiple Logistic Regression Without Interaction Model (Model A) -dzul**
+### **Multiple Logistic Regression Without Interaction Model (Model A)**
+
+Model A: MLR without interaction with CHD
+
+Predictors: Age, BMI, Gender, Hypertension, Diabetes, Smoking status
+
+```{r}
+MLR_modA <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina , 
+           family = binomial, 
+           data = CHD)
+summary(MLR_modA)
+```
 
 ------------------------------------------------------------------------
 
-### **Multiple Logistic Regression With Interaction Model (Model B) -dzul**
+### **Multiple Logistic Regression With Interaction Model (Model B)**
+
+```{r}
+MLR_modB <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina + age:gender , 
+           family = binomial, 
+           data = CHD)
+summary(MLR_modB)
+```
 
 ------------------------------------------------------------------------
 
