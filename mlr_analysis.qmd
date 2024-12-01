@@ -370,7 +370,7 @@ SLR_table
 
 Model A: MLR without interaction with CHD
 
-Predictors: Age, BMI, Gender, Hypertension, Diabetes, Smoking status
+Predictors: Age, Gender, Chest pain type, blood pressure, cholesterol level, resting ECG, exercise-induced angina
 
 ```{r}
 MLR_modA <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina , 
@@ -394,25 +394,125 @@ summary(MLR_modB)
 
 ## **Model Selection -shu**
 
-------------------------------------------------------------------------
+Likelihood Ratio Test will be used for selection model since AIC for both model (MLR_modA and MLR_modB) almost similar (292.25,294.18)
+
+```{r}
+# Perform the Likelihood Ratio Test and save the result to 'lr_test'
+lr_test <- anova(MLR_modA, MLR_modB, test = "Chisq")
+
+# Print the result of the Likelihood Ratio Test
+lr_test
+```
+
+Since p-value is 0.7967, the interaction term does not significantly improve the model, thus simpler model (MLR_modA) is choose for ease of interpretation.
 
 ## **Multicollinearity checking -shu**
 
+Variance Inflation Factor (VIF) is used in this MLR model to check for multicollinearity. High VIF values indicate multicollinearity, meaning that one of the predictor is highly correlated with other predictors in the model.
+
+```{r}
+library(car)
+# Calculate VIF values for the final model
+MLR_final <- MLR_modA
+vif_MLR_final <- vif(MLR_final)
+print(vif_MLR_final)
+```
+
+All VIF values are close to 1, which is well below the common thresholds of 5 or 10 that indicate multicollinearity. This suggest that there is **no significant multicollinearity** among the predictors in the model.
+
 ------------------------------------------------------------------------
 
+## **Variables Importance**
+
+```{r}
+library(randomForest)
+rf <- randomForest(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina,
+                   data = CHD)
+
+library(vip)
+vip(rf)
+```
+
+The plot highlights that **chest pain type**, **age, and cholesterol level** are the most influential predictors, meaning they have the greatest impact on predicting the outcome. On the other hand, variables like **blood pressure**, **exercise-induced angina**, **gender** and **resting ECG** have less influence in comparison.
+
+---
+
 ## **Prediction -shu**
+
+```{r}
+final_model <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina,
+                   data = CHD,
+                   family = binomial)
+
+#predicted log odds
+library(gtsummary)
+tbl_regression(final_model, conf.level = 0.95)
+```
+
+```{r}
+#Predicted odd ratio
+tbl_regression(final_model, exponentiate = TRUE, conf.level = 0.95)
+```
+
+```{r}
+#Fitted values
+library(broom)
+fitted_values_m <- augment(final_model, type.predict = 'response')
+```
 
 ------------------------------------------------------------------------
 
 ## **Model Checking - nazli**
 
+```{r}
+#check model performance
+library(performance)
+check_model(final_model, residual_type = "normal")
+```
+
 1\) Overall fitness (accuracy, sensitivity,specificity)
+
+```{r}
+final.m.prob <- 
+  augment(final_model, 
+          type.predict = 'response') %>%
+  mutate(pred.class = factor(ifelse(.fitted > 0.5, 'yes', 'no')))
+
+```
+
+```{r}
+final.m.prob$CHD <- factor(final.m.prob$CHD, levels = c('yes', 'no'))
+final.m.prob$pred.class <- factor(final.m.prob$pred.class, levels = c('yes', 'no'))
+```
+
+```{r}
+library(caret)
+confusionMatrix(final.m.prob$CHD, final.m.prob$pred.class)
+```
 
 2\) Hosmer-Lemeshow test
 
+```{r}
+library(generalhoslem)
+logitgof(CHD$CHD, fitted(final_model), g = 11)
+```
+
 3\) Area under ROC
 
-------------------------------------------------------------------------
+```{r}
+library(pROC)
+roc(CHD ~ fitted.values(final_model), data = CHD,
+    plot = TRUE, legacy.axes = TRUE,
+    print.auc = TRUE, ci = TRUE)
+```
+
+Our model shows that:
+
+-   the area under the curve is **87.1%**. The values of above 70 are considered to have good discriminating effect. The CI is relatively narrow, suggesting a fairly precise estimation of the AUC.
+
+-   the p-values from the Hosmer Lemeshow is above 5% values (p=0.6062). This support our believe that our model has good fit.
+
+---
 
 ## **Presentation - kak mah**
 
