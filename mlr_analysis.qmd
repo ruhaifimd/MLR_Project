@@ -435,7 +435,7 @@ vip(rf)
 
 The plot highlights that **chest pain type**, **age, and cholesterol level** are the most influential predictors, meaning they have the greatest impact on predicting the outcome. On the other hand, variables like **blood pressure**, **exercise-induced angina**, **gender** and **resting ECG** have less influence in comparison.
 
----
+------------------------------------------------------------------------
 
 ## **Prediction -shu**
 
@@ -473,22 +473,28 @@ check_model(final_model, residual_type = "normal")
 1\) Overall fitness (accuracy, sensitivity,specificity)
 
 ```{r}
-final.m.prob <- 
-  augment(final_model, 
-          type.predict = 'response') %>%
-  mutate(pred.class = factor(ifelse(.fitted > 0.5, 'yes', 'no')))
-
-```
-
-```{r}
-final.m.prob$CHD <- factor(final.m.prob$CHD, levels = c('yes', 'no'))
-final.m.prob$pred.class <- factor(final.m.prob$pred.class, levels = c('yes', 'no'))
-```
-
-```{r}
+# Load required libraries
 library(caret)
-confusionMatrix(final.m.prob$CHD, final.m.prob$pred.class)
+
+# Predict probabilities and classify based on threshold 0.5
+predicted_probs <- predict(final_model, type = "response")
+predicted_classes <- ifelse(predicted_probs > 0.5, "yes", "no")
+
+# Create confusion matrix and calculate metrics
+conf_matrix <- confusionMatrix(
+  factor(predicted_classes, levels = c("no", "yes")),
+  factor(CHD$CHD, levels = c("no", "yes"))
+)
+
+#Print
+conf_matrix
 ```
+
+-   Accuracy : The model correctly classify 21.1%
+
+-   Sensitivity : The model can predict 23.2% of occurence of CHD from sample population among those identified to have CHD.
+
+-   Specificity : The model can predict 19.4% of absence CHD from sample population among those who do not have CHD.
 
 2\) Hosmer-Lemeshow test
 
@@ -512,18 +518,144 @@ Our model shows that:
 
 -   the p-values from the Hosmer Lemeshow is above 5% values (p=0.6062). This support our believe that our model has good fit.
 
----
+------------------------------------------------------------------------
 
 ## **Presentation - kak mah**
 
 1\) Descriptive analysis
 
+```{r}
+des_table <- tbl_summary(
+  data = CHD,
+  by = CHD,
+  statistic = list(all_continuous() ~ "{mean} ({sd})", all_categorical() ~ "{n} ({p}%)")
+) %>% 
+  modify_spanning_header(all_stat_cols() ~ "**CHD**")
+
+des_table
+```
+
 2\) Univariate table
+
+```{r}
+SLR_table
+```
 
 3\) Multivariate table
 
+```{r}
+# final_model is your multivariable model
+# Create the table and convert it to gt
+MLR_table <- tbl_regression(final_model, exponentiate = TRUE) %>%
+  bold_labels() %>%
+  italicize_levels() %>%
+  as_gt() %>%
+  gt::tab_header(
+    title = "Model A Multiple Logistic Regression Model",
+    subtitle = "Without Interaction"
+  )
+
+# Custom text for the footnote section
+MLR_table <- MLR_table%>%
+  gt::tab_footnote(
+    footnote = "Constant = -6.678750"
+  ) %>%
+  gt::tab_footnote(
+    footnote = "No multicollinearity"
+  ) %>%
+  gt::tab_footnote(
+    footnote = "Hosmer-Lemeshow test, p-value = 0.6062"
+  ) %>%
+  gt::tab_footnote(
+    footnote = "Classification table 21.1% correctly classified"
+  ) %>%
+  gt::tab_footnote(
+    footnote = "Area under Receiver Operating Characteristics (ROC) curve was 87.1%"
+    
+  )
+
+
+# Print the gt table
+MLR_table
+```
+
 4\) Final table
+
+```{r}
+# Combine the univariate tables into one table
+SLR_table_nogt <- tbl_stack(
+  list(
+    tbl_age, 
+    tbl_gender, 
+    tbl_chest_pain, 
+    tbl_chol, 
+    tbl_bp, 
+    tbl_ecg,
+    tbl_angina
+  )
+) %>%
+  modify_header(update = list(
+    estimate ~ "**OR**",
+    conf.low ~ "**95% CI'**",
+    p.value ~ "**p-value**"
+  )) %>%
+  bold_labels() %>%
+  bold_p() %>% 
+  modify_spanning_header(all_stat_cols() ~ "**Univariate**")
+
+# Create multivariable regression table without converting it to gt
+MLR_table_nogt <- tbl_regression(final_model, exponentiate = TRUE) %>%
+  bold_labels() %>%
+  italicize_levels() %>%
+  bold_p() %>% 
+  modify_header(update = list(
+    estimate ~ "**OR**",
+    conf.low ~ "**95% CI'**",
+    p.value ~ "**p-value**"
+  )) %>%
+  modify_spanning_header(all_stat_cols() ~ "**Multivariable**")
+
+# Merge the univariate and multivariable tables side by side
+table_side_by_side <- tbl_merge(
+  tbls = list(SLR_table_nogt, MLR_table_nogt),
+  tab_spanner = c("**Univariate**", "**Multivariable**")
+)
+
+# Convert the merged table to gt for final formatting
+final_table <- table_side_by_side %>%
+  as_gt() %>%
+  gt::tab_header(
+    title = "Logistic Regression Model Results",
+    subtitle = "Univariate and Multivariable Analyses"
+  )
+
+# Add footnotes to the final table
+final_table <- final_table %>%
+  gt::tab_footnote(
+    footnote = "Constant = -6.678750"
+  ) %>%
+  gt::tab_footnote(
+    footnote = "No multicollinearity"
+  ) %>%
+  gt::tab_footnote(
+    footnote = "Hosmer-Lemeshow test, p-value = 0.6062"
+  ) %>%
+  gt::tab_footnote(
+    footnote = "Classification table 21.1% correctly classified"
+  ) %>%
+  gt::tab_footnote(
+    footnote = "Area under Receiver Operating Characteristics (ROC) curve was 87.1%"
+  )
+# View the final table
+final_table
+```
 
 ------------------------------------------------------------------------
 
 ## **Interpretation - semua kita bincang**
+
+```{r}
+#model equation
+library(equatiomatic)
+extract_eq(final_model, use_coefs = TRUE)
+```
