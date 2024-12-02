@@ -392,7 +392,7 @@ summary(MLR_modB)
 
 ------------------------------------------------------------------------
 
-## **Model Selection -shu**
+## **Model Selection**
 
 Likelihood Ratio Test will be used for selection model since AIC for both model (MLR_modA and MLR_modB) almost similar (292.25,294.18)
 
@@ -406,7 +406,7 @@ lr_test
 
 Since p-value is 0.7967, the interaction term does not significantly improve the model, thus simpler model (MLR_modA) is choose for ease of interpretation.
 
-## **Multicollinearity checking -shu**
+## **Multicollinearity checking**
 
 Variance Inflation Factor (VIF) is used in this MLR model to check for multicollinearity. High VIF values indicate multicollinearity, meaning that one of the predictor is highly correlated with other predictors in the model.
 
@@ -437,7 +437,7 @@ The plot highlights that **chest pain type**, **age, and cholesterol level** a
 
 ------------------------------------------------------------------------
 
-## **Prediction -shu**
+## **Prediction**
 
 ```{r}
 final_model <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina,
@@ -462,7 +462,7 @@ fitted_values_m <- augment(final_model, type.predict = 'response')
 
 ------------------------------------------------------------------------
 
-## **Model Checking - nazli**
+## **Model Checking**
 
 ```{r}
 #check model performance
@@ -520,7 +520,7 @@ Our model shows that:
 
 ------------------------------------------------------------------------
 
-## **Presentation - kak mah**
+## **Presentation**
 
 1\) Descriptive analysis
 
@@ -652,10 +652,26 @@ final_table
 
 ------------------------------------------------------------------------
 
-## **Interpretation - semua kita bincang**
+## **Interpretation**
 
 ```{r}
 #model equation
 library(equatiomatic)
 extract_eq(final_model, use_coefs = TRUE)
 ```
+
+-   Age, gender, chest pain type (typical angina), and exercise-induced angina are significant predictors for the outcome in this study
+
+-   In the univariate model, each additional year of age increased the odds of the outcome by 1.05 (95% CI: 1.03–1.08, p-value \<0.001). After adjusting for other predictors, age remained a significant predictor with an OR of 1.05 (95% CI: 1.02–1.09, p-value = 0.005). The narrow confidence interval suggests a precise estimate, and the consistent significance across models highlights the independent effect of age on the outcome.
+
+-   Men had significantly lower odds of the outcome compared to women, as evidenced by an OR of 0.27 (95% CI: 0.16–0.46, p-value \<0.001) in the univariate model. After adjustment for other variables, the odds ratio decreased further to 0.15 (95% CI: 0.07–0.31, p-value \<0.001). The persistence of significance in the adjusted model, coupled with narrow confidence intervals, suggests a substantially reduced risk for men compared to women under the conditions studied.
+
+-   Typical angina showed a strong association with the outcome in the univariate model (OR: 6.10; 95% CI: 2.41–16.9, p-value \<0.001). This association became even stronger after adjustment, with an OR of 8.06 (95% CI: 2.74–26.1, p-value \<0.001). Despite the wide confidence interval, which reflects variability, the consistent significance across models underscores the importance of typical angina as a predictor.
+
+-   In the univariate model, individuals with exercise-induced angina had 7.57 times the odds of the outcome (95% CI: 4.41–13.4, p-value \<0.001). After adjusting for other predictors, the odds ratio decreased to 3.30 (95% CI: 1.69–6.57, p-value \<0.001). The persistence of statistical significance in the adjusted model indicates the independent effect of exercise-induced angina on the outcome.
+
+-   Blood pressure was a significant predictor in the univariate model (OR: 1.02; 95% CI: 1.00–1.03, p-value = 0.013). However, it was no longer significant in the multivariable model (OR: 1.02; 95% CI: 1.00–1.03, p-value = 0.089). This suggests that the effect of blood pressure may be mediated by other factors such as chest pain type or exercise-induced angina.
+
+-   The presence of ST-T wave abnormalities was associated with reduced odds of the outcome in the univariate model (OR: 0.50; 95% CI: 0.32–0.80, p-value = 0.003). However, this variable was not significant in the multivariable model (OR: 0.63; 95% CI: 0.34–1.16, p-value = 0.14). The loss of significance indicates potential confounding effects from other predictors.
+
+-   Both cholesterol levels and left ventricular hypertrophy were not significant predictors in either univariate or multivariable models, indicating limited predictive value for the outcome in this dataset.
