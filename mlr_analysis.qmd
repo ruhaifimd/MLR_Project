@@ -81,6 +81,7 @@ library(dagitty)
 library(DescTools)
 library(dplyr)
 library(knitr)
+library(sjPlot)
 ```
 
 ------------------------------------------------------------------------
@@ -272,7 +273,7 @@ For **categorical data**: Bar plots are utilized to visualize the frequency of e
     SLR.age <- glm(CHD ~ age,
                    data = CHD,
                    family = binomial)
-    summary(SLR.age)
+    tab_model(SLR.age)
     ```
 
 2.  gender (gender)
@@ -282,7 +283,7 @@ For **categorical data**: Bar plots are utilized to visualize the frequency of e
                       data = CHD,
                       family = binomial)
 
-    summary(SLR.gender)
+    tab_model(SLR.gender)
     ```
 
 3.  chest pain type (chest_pain_type)
@@ -292,7 +293,7 @@ For **categorical data**: Bar plots are utilized to visualize the frequency of e
                           data = CHD,
                           family = binomial)
 
-    summary(SLR.chest_pain)
+    tab_model(SLR.chest_pain)
     ```
 
 4.  resting blood pressure (blood_pressure)
@@ -302,7 +303,7 @@ For **categorical data**: Bar plots are utilized to visualize the frequency of e
                   data = CHD,
                   family = binomial)
 
-    summary(SLR.bp)
+    tab_model(SLR.bp)
     ```
 
 5.  cholesterol level (chol)
@@ -312,7 +313,7 @@ For **categorical data**: Bar plots are utilized to visualize the frequency of e
                     data = CHD,
                     family = binomial)
 
-    summary(SLR.chol)
+    tab_model(SLR.chol)
     ```
 
 6.  resting ECG (resting_ecg)
@@ -322,7 +323,7 @@ For **categorical data**: Bar plots are utilized to visualize the frequency of e
                    data = CHD,
                    family = binomial)
 
-    summary(SLR.ecg)
+    tab_model(SLR.ecg)
     ```
 
 7.  exercise-induced angina (exercise_induced_angina)
@@ -332,7 +333,7 @@ For **categorical data**: Bar plots are utilized to visualize the frequency of e
                       data = CHD,
                       family = binomial)
 
-    summary(SLR.angina)
+    tab_model(SLR.angina)
     ```
 
 ```{r}
@@ -376,7 +377,7 @@ Predictors: Age, Gender, Chest pain type, blood pressure, cholesterol level, res
 MLR_modA <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina , 
            family = binomial, 
            data = CHD)
-summary(MLR_modA)
+tab_model(MLR_modA)
 ```
 
 ------------------------------------------------------------------------
@@ -387,7 +388,7 @@ summary(MLR_modA)
 MLR_modB <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina + age:gender , 
            family = binomial, 
            data = CHD)
-summary(MLR_modB)
+tab_model(MLR_modB)
 ```
 
 ------------------------------------------------------------------------
@@ -552,7 +553,7 @@ Re-run the Model with the non-influential observations (final model)
 final_model_new <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina,
                    data = new_CHD,
                    family = binomial)
-summary(final_model_new)
+tab_model(final_model_new)
 ```
 
 ## **Diagnostic plot after removal of influental observation**
