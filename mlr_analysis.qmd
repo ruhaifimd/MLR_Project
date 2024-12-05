@@ -465,9 +465,9 @@ fitted_values_m <- augment(final_model, type.predict = 'response')
 ## **Model Checking**
 
 ```{r}
-#check model performance
+#check model assumption
 library(performance)
-check_model(final_model, residual_type = "normal")
+check_model(final_model)
 ```
 
 1\) Overall fitness (accuracy, sensitivity,specificity)
