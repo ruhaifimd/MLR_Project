@@ -181,7 +181,8 @@ window.Quarto = {
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DescTools)</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 </section>
@@ -833,23 +834,23 @@ ventricular hypertrophy]</td>
 <span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="co">#Print the summary table</span></span>
 <span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>SLR_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="eknshdiqxk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#eknshdiqxk table {
+<div id="rfpfxddxdt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rfpfxddxdt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#eknshdiqxk thead, #eknshdiqxk tbody, #eknshdiqxk tfoot, #eknshdiqxk tr, #eknshdiqxk td, #eknshdiqxk th {
+#rfpfxddxdt thead, #rfpfxddxdt tbody, #rfpfxddxdt tfoot, #rfpfxddxdt tr, #rfpfxddxdt td, #rfpfxddxdt th {
   border-style: none;
 }
 
-#eknshdiqxk p {
+#rfpfxddxdt p {
   margin: 0;
   padding: 0;
 }
 
-#eknshdiqxk .gt_table {
+#rfpfxddxdt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -875,12 +876,12 @@ ventricular hypertrophy]</td>
   border-left-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_caption {
+#rfpfxddxdt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#eknshdiqxk .gt_title {
+#rfpfxddxdt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -892,7 +893,7 @@ ventricular hypertrophy]</td>
   border-bottom-width: 0;
 }
 
-#eknshdiqxk .gt_subtitle {
+#rfpfxddxdt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -904,7 +905,7 @@ ventricular hypertrophy]</td>
   border-top-width: 0;
 }
 
-#eknshdiqxk .gt_heading {
+#rfpfxddxdt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -916,13 +917,13 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_bottom_border {
+#rfpfxddxdt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_col_headings {
+#rfpfxddxdt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -937,7 +938,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_col_heading {
+#rfpfxddxdt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -957,7 +958,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#eknshdiqxk .gt_column_spanner_outer {
+#rfpfxddxdt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -969,15 +970,15 @@ ventricular hypertrophy]</td>
   padding-right: 4px;
 }
 
-#eknshdiqxk .gt_column_spanner_outer:first-child {
+#rfpfxddxdt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#eknshdiqxk .gt_column_spanner_outer:last-child {
+#rfpfxddxdt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#eknshdiqxk .gt_column_spanner {
+#rfpfxddxdt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -989,11 +990,11 @@ ventricular hypertrophy]</td>
   width: 100%;
 }
 
-#eknshdiqxk .gt_spanner_row {
+#rfpfxddxdt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#eknshdiqxk .gt_group_heading {
+#rfpfxddxdt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1019,7 +1020,7 @@ ventricular hypertrophy]</td>
   text-align: left;
 }
 
-#eknshdiqxk .gt_empty_group_heading {
+#rfpfxddxdt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1034,15 +1035,15 @@ ventricular hypertrophy]</td>
   vertical-align: middle;
 }
 
-#eknshdiqxk .gt_from_md > :first-child {
+#rfpfxddxdt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#eknshdiqxk .gt_from_md > :last-child {
+#rfpfxddxdt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#eknshdiqxk .gt_row {
+#rfpfxddxdt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1061,7 +1062,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#eknshdiqxk .gt_stub {
+#rfpfxddxdt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1074,7 +1075,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#eknshdiqxk .gt_stub_row_group {
+#rfpfxddxdt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1088,15 +1089,15 @@ ventricular hypertrophy]</td>
   vertical-align: top;
 }
 
-#eknshdiqxk .gt_row_group_first td {
+#rfpfxddxdt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#eknshdiqxk .gt_row_group_first th {
+#rfpfxddxdt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#eknshdiqxk .gt_summary_row {
+#rfpfxddxdt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1106,16 +1107,16 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#eknshdiqxk .gt_first_summary_row {
+#rfpfxddxdt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_first_summary_row.thick {
+#rfpfxddxdt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#eknshdiqxk .gt_last_summary_row {
+#rfpfxddxdt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1125,7 +1126,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_grand_summary_row {
+#rfpfxddxdt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1135,7 +1136,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#eknshdiqxk .gt_first_grand_summary_row {
+#rfpfxddxdt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1145,7 +1146,7 @@ ventricular hypertrophy]</td>
   border-top-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_last_grand_summary_row_top {
+#rfpfxddxdt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1155,11 +1156,11 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_striped {
+#rfpfxddxdt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#eknshdiqxk .gt_table_body {
+#rfpfxddxdt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1168,7 +1169,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_footnotes {
+#rfpfxddxdt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1182,7 +1183,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_footnote {
+#rfpfxddxdt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1191,7 +1192,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#eknshdiqxk .gt_sourcenotes {
+#rfpfxddxdt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1205,7 +1206,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#eknshdiqxk .gt_sourcenote {
+#rfpfxddxdt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1213,72 +1214,72 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#eknshdiqxk .gt_left {
+#rfpfxddxdt .gt_left {
   text-align: left;
 }
 
-#eknshdiqxk .gt_center {
+#rfpfxddxdt .gt_center {
   text-align: center;
 }
 
-#eknshdiqxk .gt_right {
+#rfpfxddxdt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#eknshdiqxk .gt_font_normal {
+#rfpfxddxdt .gt_font_normal {
   font-weight: normal;
 }
 
-#eknshdiqxk .gt_font_bold {
+#rfpfxddxdt .gt_font_bold {
   font-weight: bold;
 }
 
-#eknshdiqxk .gt_font_italic {
+#rfpfxddxdt .gt_font_italic {
   font-style: italic;
 }
 
-#eknshdiqxk .gt_super {
+#rfpfxddxdt .gt_super {
   font-size: 65%;
 }
 
-#eknshdiqxk .gt_footnote_marks {
+#rfpfxddxdt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#eknshdiqxk .gt_asterisk {
+#rfpfxddxdt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#eknshdiqxk .gt_indent_1 {
+#rfpfxddxdt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#eknshdiqxk .gt_indent_2 {
+#rfpfxddxdt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#eknshdiqxk .gt_indent_3 {
+#rfpfxddxdt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#eknshdiqxk .gt_indent_4 {
+#rfpfxddxdt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#eknshdiqxk .gt_indent_5 {
+#rfpfxddxdt .gt_indent_5 {
   text-indent: 25px;
 }
 
-#eknshdiqxk .katex-display {
+#rfpfxddxdt .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#eknshdiqxk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rfpfxddxdt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1753,23 +1754,23 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
 <span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
 <span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(final_model, <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="asmitxldwy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#asmitxldwy table {
+<div id="qrnjbhmfbe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qrnjbhmfbe table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#asmitxldwy thead, #asmitxldwy tbody, #asmitxldwy tfoot, #asmitxldwy tr, #asmitxldwy td, #asmitxldwy th {
+#qrnjbhmfbe thead, #qrnjbhmfbe tbody, #qrnjbhmfbe tfoot, #qrnjbhmfbe tr, #qrnjbhmfbe td, #qrnjbhmfbe th {
   border-style: none;
 }
 
-#asmitxldwy p {
+#qrnjbhmfbe p {
   margin: 0;
   padding: 0;
 }
 
-#asmitxldwy .gt_table {
+#qrnjbhmfbe .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1795,12 +1796,12 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_caption {
+#qrnjbhmfbe .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#asmitxldwy .gt_title {
+#qrnjbhmfbe .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1812,7 +1813,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-bottom-width: 0;
 }
 
-#asmitxldwy .gt_subtitle {
+#qrnjbhmfbe .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1824,7 +1825,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-top-width: 0;
 }
 
-#asmitxldwy .gt_heading {
+#qrnjbhmfbe .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1836,13 +1837,13 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_bottom_border {
+#qrnjbhmfbe .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_col_headings {
+#qrnjbhmfbe .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1857,7 +1858,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_col_heading {
+#qrnjbhmfbe .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1877,7 +1878,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   overflow-x: hidden;
 }
 
-#asmitxldwy .gt_column_spanner_outer {
+#qrnjbhmfbe .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1889,15 +1890,15 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 4px;
 }
 
-#asmitxldwy .gt_column_spanner_outer:first-child {
+#qrnjbhmfbe .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#asmitxldwy .gt_column_spanner_outer:last-child {
+#qrnjbhmfbe .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#asmitxldwy .gt_column_spanner {
+#qrnjbhmfbe .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1909,11 +1910,11 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   width: 100%;
 }
 
-#asmitxldwy .gt_spanner_row {
+#qrnjbhmfbe .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#asmitxldwy .gt_group_heading {
+#qrnjbhmfbe .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1939,7 +1940,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   text-align: left;
 }
 
-#asmitxldwy .gt_empty_group_heading {
+#qrnjbhmfbe .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1954,15 +1955,15 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   vertical-align: middle;
 }
 
-#asmitxldwy .gt_from_md > :first-child {
+#qrnjbhmfbe .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#asmitxldwy .gt_from_md > :last-child {
+#qrnjbhmfbe .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#asmitxldwy .gt_row {
+#qrnjbhmfbe .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1981,7 +1982,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   overflow-x: hidden;
 }
 
-#asmitxldwy .gt_stub {
+#qrnjbhmfbe .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1994,7 +1995,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#asmitxldwy .gt_stub_row_group {
+#qrnjbhmfbe .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2008,15 +2009,15 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   vertical-align: top;
 }
 
-#asmitxldwy .gt_row_group_first td {
+#qrnjbhmfbe .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#asmitxldwy .gt_row_group_first th {
+#qrnjbhmfbe .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#asmitxldwy .gt_summary_row {
+#qrnjbhmfbe .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2026,16 +2027,16 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#asmitxldwy .gt_first_summary_row {
+#qrnjbhmfbe .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_first_summary_row.thick {
+#qrnjbhmfbe .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#asmitxldwy .gt_last_summary_row {
+#qrnjbhmfbe .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2045,7 +2046,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_grand_summary_row {
+#qrnjbhmfbe .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2055,7 +2056,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#asmitxldwy .gt_first_grand_summary_row {
+#qrnjbhmfbe .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2065,7 +2066,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_last_grand_summary_row_top {
+#qrnjbhmfbe .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2075,11 +2076,11 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_striped {
+#qrnjbhmfbe .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#asmitxldwy .gt_table_body {
+#qrnjbhmfbe .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2088,7 +2089,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_footnotes {
+#qrnjbhmfbe .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2102,7 +2103,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_footnote {
+#qrnjbhmfbe .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2111,7 +2112,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#asmitxldwy .gt_sourcenotes {
+#qrnjbhmfbe .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2125,7 +2126,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#asmitxldwy .gt_sourcenote {
+#qrnjbhmfbe .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2133,72 +2134,72 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#asmitxldwy .gt_left {
+#qrnjbhmfbe .gt_left {
   text-align: left;
 }
 
-#asmitxldwy .gt_center {
+#qrnjbhmfbe .gt_center {
   text-align: center;
 }
 
-#asmitxldwy .gt_right {
+#qrnjbhmfbe .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#asmitxldwy .gt_font_normal {
+#qrnjbhmfbe .gt_font_normal {
   font-weight: normal;
 }
 
-#asmitxldwy .gt_font_bold {
+#qrnjbhmfbe .gt_font_bold {
   font-weight: bold;
 }
 
-#asmitxldwy .gt_font_italic {
+#qrnjbhmfbe .gt_font_italic {
   font-style: italic;
 }
 
-#asmitxldwy .gt_super {
+#qrnjbhmfbe .gt_super {
   font-size: 65%;
 }
 
-#asmitxldwy .gt_footnote_marks {
+#qrnjbhmfbe .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#asmitxldwy .gt_asterisk {
+#qrnjbhmfbe .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#asmitxldwy .gt_indent_1 {
+#qrnjbhmfbe .gt_indent_1 {
   text-indent: 5px;
 }
 
-#asmitxldwy .gt_indent_2 {
+#qrnjbhmfbe .gt_indent_2 {
   text-indent: 10px;
 }
 
-#asmitxldwy .gt_indent_3 {
+#qrnjbhmfbe .gt_indent_3 {
   text-indent: 15px;
 }
 
-#asmitxldwy .gt_indent_4 {
+#qrnjbhmfbe .gt_indent_4 {
   text-indent: 20px;
 }
 
-#asmitxldwy .gt_indent_5 {
+#qrnjbhmfbe .gt_indent_5 {
   text-indent: 25px;
 }
 
-#asmitxldwy .katex-display {
+#qrnjbhmfbe .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#asmitxldwy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qrnjbhmfbe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2358,23 +2359,23 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Predicted odd ratio</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(final_model, <span class="at">exponentiate =</span> <span class="cn">TRUE</span>, <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fnlstvixyo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fnlstvixyo table {
+<div id="cljynjqphv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cljynjqphv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fnlstvixyo thead, #fnlstvixyo tbody, #fnlstvixyo tfoot, #fnlstvixyo tr, #fnlstvixyo td, #fnlstvixyo th {
+#cljynjqphv thead, #cljynjqphv tbody, #cljynjqphv tfoot, #cljynjqphv tr, #cljynjqphv td, #cljynjqphv th {
   border-style: none;
 }
 
-#fnlstvixyo p {
+#cljynjqphv p {
   margin: 0;
   padding: 0;
 }
 
-#fnlstvixyo .gt_table {
+#cljynjqphv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2400,12 +2401,12 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_caption {
+#cljynjqphv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fnlstvixyo .gt_title {
+#cljynjqphv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2417,7 +2418,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-bottom-width: 0;
 }
 
-#fnlstvixyo .gt_subtitle {
+#cljynjqphv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2429,7 +2430,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-top-width: 0;
 }
 
-#fnlstvixyo .gt_heading {
+#cljynjqphv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2441,13 +2442,13 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_bottom_border {
+#cljynjqphv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_col_headings {
+#cljynjqphv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2462,7 +2463,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_col_heading {
+#cljynjqphv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2482,7 +2483,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   overflow-x: hidden;
 }
 
-#fnlstvixyo .gt_column_spanner_outer {
+#cljynjqphv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2494,15 +2495,15 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 4px;
 }
 
-#fnlstvixyo .gt_column_spanner_outer:first-child {
+#cljynjqphv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fnlstvixyo .gt_column_spanner_outer:last-child {
+#cljynjqphv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fnlstvixyo .gt_column_spanner {
+#cljynjqphv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2514,11 +2515,11 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   width: 100%;
 }
 
-#fnlstvixyo .gt_spanner_row {
+#cljynjqphv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fnlstvixyo .gt_group_heading {
+#cljynjqphv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2544,7 +2545,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   text-align: left;
 }
 
-#fnlstvixyo .gt_empty_group_heading {
+#cljynjqphv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2559,15 +2560,15 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   vertical-align: middle;
 }
 
-#fnlstvixyo .gt_from_md > :first-child {
+#cljynjqphv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fnlstvixyo .gt_from_md > :last-child {
+#cljynjqphv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fnlstvixyo .gt_row {
+#cljynjqphv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2586,7 +2587,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   overflow-x: hidden;
 }
 
-#fnlstvixyo .gt_stub {
+#cljynjqphv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2599,7 +2600,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#fnlstvixyo .gt_stub_row_group {
+#cljynjqphv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2613,15 +2614,15 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   vertical-align: top;
 }
 
-#fnlstvixyo .gt_row_group_first td {
+#cljynjqphv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fnlstvixyo .gt_row_group_first th {
+#cljynjqphv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fnlstvixyo .gt_summary_row {
+#cljynjqphv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2631,16 +2632,16 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#fnlstvixyo .gt_first_summary_row {
+#cljynjqphv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_first_summary_row.thick {
+#cljynjqphv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fnlstvixyo .gt_last_summary_row {
+#cljynjqphv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2650,7 +2651,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_grand_summary_row {
+#cljynjqphv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2660,7 +2661,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#fnlstvixyo .gt_first_grand_summary_row {
+#cljynjqphv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2670,7 +2671,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_last_grand_summary_row_top {
+#cljynjqphv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2680,11 +2681,11 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_striped {
+#cljynjqphv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fnlstvixyo .gt_table_body {
+#cljynjqphv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2693,7 +2694,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_footnotes {
+#cljynjqphv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2707,7 +2708,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_footnote {
+#cljynjqphv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2716,7 +2717,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#fnlstvixyo .gt_sourcenotes {
+#cljynjqphv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2730,7 +2731,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#fnlstvixyo .gt_sourcenote {
+#cljynjqphv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2738,72 +2739,72 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
   padding-right: 5px;
 }
 
-#fnlstvixyo .gt_left {
+#cljynjqphv .gt_left {
   text-align: left;
 }
 
-#fnlstvixyo .gt_center {
+#cljynjqphv .gt_center {
   text-align: center;
 }
 
-#fnlstvixyo .gt_right {
+#cljynjqphv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fnlstvixyo .gt_font_normal {
+#cljynjqphv .gt_font_normal {
   font-weight: normal;
 }
 
-#fnlstvixyo .gt_font_bold {
+#cljynjqphv .gt_font_bold {
   font-weight: bold;
 }
 
-#fnlstvixyo .gt_font_italic {
+#cljynjqphv .gt_font_italic {
   font-style: italic;
 }
 
-#fnlstvixyo .gt_super {
+#cljynjqphv .gt_super {
   font-size: 65%;
 }
 
-#fnlstvixyo .gt_footnote_marks {
+#cljynjqphv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fnlstvixyo .gt_asterisk {
+#cljynjqphv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fnlstvixyo .gt_indent_1 {
+#cljynjqphv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fnlstvixyo .gt_indent_2 {
+#cljynjqphv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fnlstvixyo .gt_indent_3 {
+#cljynjqphv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fnlstvixyo .gt_indent_4 {
+#cljynjqphv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fnlstvixyo .gt_indent_5 {
+#cljynjqphv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fnlstvixyo .katex-display {
+#cljynjqphv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fnlstvixyo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#cljynjqphv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2970,8 +2971,7 @@ exercise_induced_angina 1.094765  1        1.046310</code></pre>
 <h2 class="anchored" data-anchor-id="model-checking"><strong>Model Checking</strong></h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#check model assumption</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">check_model</span>(final_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">check_model</span>(final_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -3253,32 +3253,11 @@ ventricular hypertrophy]</td>
 <section id="diagnostic-plot-after-removal-of-influental-observation" class="level2">
 <h2 class="anchored" data-anchor-id="diagnostic-plot-after-removal-of-influental-observation"><strong>Diagnostic plot after removal of influental observation</strong></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(final_model_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_model</span>(final_model_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="mlr_analysis_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="mlr_analysis_files/figure-html/unnamed-chunk-38-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="mlr_analysis_files/figure-html/unnamed-chunk-38-3.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="mlr_analysis_files/figure-html/unnamed-chunk-38-4.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -3298,23 +3277,23 @@ ventricular hypertrophy]</td>
 <span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>des_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="xogqzcnvnx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xogqzcnvnx table {
+<div id="ohogzodrbw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ohogzodrbw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xogqzcnvnx thead, #xogqzcnvnx tbody, #xogqzcnvnx tfoot, #xogqzcnvnx tr, #xogqzcnvnx td, #xogqzcnvnx th {
+#ohogzodrbw thead, #ohogzodrbw tbody, #ohogzodrbw tfoot, #ohogzodrbw tr, #ohogzodrbw td, #ohogzodrbw th {
   border-style: none;
 }
 
-#xogqzcnvnx p {
+#ohogzodrbw p {
   margin: 0;
   padding: 0;
 }
 
-#xogqzcnvnx .gt_table {
+#ohogzodrbw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3340,12 +3319,12 @@ ventricular hypertrophy]</td>
   border-left-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_caption {
+#ohogzodrbw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xogqzcnvnx .gt_title {
+#ohogzodrbw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3357,7 +3336,7 @@ ventricular hypertrophy]</td>
   border-bottom-width: 0;
 }
 
-#xogqzcnvnx .gt_subtitle {
+#ohogzodrbw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3369,7 +3348,7 @@ ventricular hypertrophy]</td>
   border-top-width: 0;
 }
 
-#xogqzcnvnx .gt_heading {
+#ohogzodrbw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3381,13 +3360,13 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_bottom_border {
+#ohogzodrbw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_col_headings {
+#ohogzodrbw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3402,7 +3381,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_col_heading {
+#ohogzodrbw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3422,7 +3401,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#xogqzcnvnx .gt_column_spanner_outer {
+#ohogzodrbw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3434,15 +3413,15 @@ ventricular hypertrophy]</td>
   padding-right: 4px;
 }
 
-#xogqzcnvnx .gt_column_spanner_outer:first-child {
+#ohogzodrbw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xogqzcnvnx .gt_column_spanner_outer:last-child {
+#ohogzodrbw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xogqzcnvnx .gt_column_spanner {
+#ohogzodrbw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3454,11 +3433,11 @@ ventricular hypertrophy]</td>
   width: 100%;
 }
 
-#xogqzcnvnx .gt_spanner_row {
+#ohogzodrbw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xogqzcnvnx .gt_group_heading {
+#ohogzodrbw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3484,7 +3463,7 @@ ventricular hypertrophy]</td>
   text-align: left;
 }
 
-#xogqzcnvnx .gt_empty_group_heading {
+#ohogzodrbw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3499,15 +3478,15 @@ ventricular hypertrophy]</td>
   vertical-align: middle;
 }
 
-#xogqzcnvnx .gt_from_md > :first-child {
+#ohogzodrbw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xogqzcnvnx .gt_from_md > :last-child {
+#ohogzodrbw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xogqzcnvnx .gt_row {
+#ohogzodrbw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3526,7 +3505,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#xogqzcnvnx .gt_stub {
+#ohogzodrbw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3539,7 +3518,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#xogqzcnvnx .gt_stub_row_group {
+#ohogzodrbw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3553,15 +3532,15 @@ ventricular hypertrophy]</td>
   vertical-align: top;
 }
 
-#xogqzcnvnx .gt_row_group_first td {
+#ohogzodrbw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xogqzcnvnx .gt_row_group_first th {
+#ohogzodrbw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xogqzcnvnx .gt_summary_row {
+#ohogzodrbw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3571,16 +3550,16 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#xogqzcnvnx .gt_first_summary_row {
+#ohogzodrbw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_first_summary_row.thick {
+#ohogzodrbw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xogqzcnvnx .gt_last_summary_row {
+#ohogzodrbw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3590,7 +3569,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_grand_summary_row {
+#ohogzodrbw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3600,7 +3579,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#xogqzcnvnx .gt_first_grand_summary_row {
+#ohogzodrbw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3610,7 +3589,7 @@ ventricular hypertrophy]</td>
   border-top-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_last_grand_summary_row_top {
+#ohogzodrbw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3620,11 +3599,11 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_striped {
+#ohogzodrbw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xogqzcnvnx .gt_table_body {
+#ohogzodrbw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3633,7 +3612,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_footnotes {
+#ohogzodrbw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3647,7 +3626,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_footnote {
+#ohogzodrbw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3656,7 +3635,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#xogqzcnvnx .gt_sourcenotes {
+#ohogzodrbw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3670,7 +3649,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#xogqzcnvnx .gt_sourcenote {
+#ohogzodrbw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3678,72 +3657,72 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#xogqzcnvnx .gt_left {
+#ohogzodrbw .gt_left {
   text-align: left;
 }
 
-#xogqzcnvnx .gt_center {
+#ohogzodrbw .gt_center {
   text-align: center;
 }
 
-#xogqzcnvnx .gt_right {
+#ohogzodrbw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xogqzcnvnx .gt_font_normal {
+#ohogzodrbw .gt_font_normal {
   font-weight: normal;
 }
 
-#xogqzcnvnx .gt_font_bold {
+#ohogzodrbw .gt_font_bold {
   font-weight: bold;
 }
 
-#xogqzcnvnx .gt_font_italic {
+#ohogzodrbw .gt_font_italic {
   font-style: italic;
 }
 
-#xogqzcnvnx .gt_super {
+#ohogzodrbw .gt_super {
   font-size: 65%;
 }
 
-#xogqzcnvnx .gt_footnote_marks {
+#ohogzodrbw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xogqzcnvnx .gt_asterisk {
+#ohogzodrbw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xogqzcnvnx .gt_indent_1 {
+#ohogzodrbw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xogqzcnvnx .gt_indent_2 {
+#ohogzodrbw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xogqzcnvnx .gt_indent_3 {
+#ohogzodrbw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xogqzcnvnx .gt_indent_4 {
+#ohogzodrbw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xogqzcnvnx .gt_indent_5 {
+#ohogzodrbw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xogqzcnvnx .katex-display {
+#ohogzodrbw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xogqzcnvnx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ohogzodrbw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3868,23 +3847,23 @@ ventricular hypertrophy]</td>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>SLR_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="alexzgmwyq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#alexzgmwyq table {
+<div id="npuevmoqug" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#npuevmoqug table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#alexzgmwyq thead, #alexzgmwyq tbody, #alexzgmwyq tfoot, #alexzgmwyq tr, #alexzgmwyq td, #alexzgmwyq th {
+#npuevmoqug thead, #npuevmoqug tbody, #npuevmoqug tfoot, #npuevmoqug tr, #npuevmoqug td, #npuevmoqug th {
   border-style: none;
 }
 
-#alexzgmwyq p {
+#npuevmoqug p {
   margin: 0;
   padding: 0;
 }
 
-#alexzgmwyq .gt_table {
+#npuevmoqug .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3910,12 +3889,12 @@ ventricular hypertrophy]</td>
   border-left-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_caption {
+#npuevmoqug .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#alexzgmwyq .gt_title {
+#npuevmoqug .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3927,7 +3906,7 @@ ventricular hypertrophy]</td>
   border-bottom-width: 0;
 }
 
-#alexzgmwyq .gt_subtitle {
+#npuevmoqug .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3939,7 +3918,7 @@ ventricular hypertrophy]</td>
   border-top-width: 0;
 }
 
-#alexzgmwyq .gt_heading {
+#npuevmoqug .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3951,13 +3930,13 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_bottom_border {
+#npuevmoqug .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_col_headings {
+#npuevmoqug .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3972,7 +3951,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_col_heading {
+#npuevmoqug .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3992,7 +3971,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#alexzgmwyq .gt_column_spanner_outer {
+#npuevmoqug .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4004,15 +3983,15 @@ ventricular hypertrophy]</td>
   padding-right: 4px;
 }
 
-#alexzgmwyq .gt_column_spanner_outer:first-child {
+#npuevmoqug .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#alexzgmwyq .gt_column_spanner_outer:last-child {
+#npuevmoqug .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#alexzgmwyq .gt_column_spanner {
+#npuevmoqug .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4024,11 +4003,11 @@ ventricular hypertrophy]</td>
   width: 100%;
 }
 
-#alexzgmwyq .gt_spanner_row {
+#npuevmoqug .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#alexzgmwyq .gt_group_heading {
+#npuevmoqug .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4054,7 +4033,7 @@ ventricular hypertrophy]</td>
   text-align: left;
 }
 
-#alexzgmwyq .gt_empty_group_heading {
+#npuevmoqug .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4069,15 +4048,15 @@ ventricular hypertrophy]</td>
   vertical-align: middle;
 }
 
-#alexzgmwyq .gt_from_md > :first-child {
+#npuevmoqug .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#alexzgmwyq .gt_from_md > :last-child {
+#npuevmoqug .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#alexzgmwyq .gt_row {
+#npuevmoqug .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4096,7 +4075,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#alexzgmwyq .gt_stub {
+#npuevmoqug .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4109,7 +4088,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#alexzgmwyq .gt_stub_row_group {
+#npuevmoqug .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4123,15 +4102,15 @@ ventricular hypertrophy]</td>
   vertical-align: top;
 }
 
-#alexzgmwyq .gt_row_group_first td {
+#npuevmoqug .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#alexzgmwyq .gt_row_group_first th {
+#npuevmoqug .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#alexzgmwyq .gt_summary_row {
+#npuevmoqug .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4141,16 +4120,16 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#alexzgmwyq .gt_first_summary_row {
+#npuevmoqug .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_first_summary_row.thick {
+#npuevmoqug .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#alexzgmwyq .gt_last_summary_row {
+#npuevmoqug .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4160,7 +4139,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_grand_summary_row {
+#npuevmoqug .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4170,7 +4149,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#alexzgmwyq .gt_first_grand_summary_row {
+#npuevmoqug .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4180,7 +4159,7 @@ ventricular hypertrophy]</td>
   border-top-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_last_grand_summary_row_top {
+#npuevmoqug .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4190,11 +4169,11 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_striped {
+#npuevmoqug .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#alexzgmwyq .gt_table_body {
+#npuevmoqug .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4203,7 +4182,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_footnotes {
+#npuevmoqug .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4217,7 +4196,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_footnote {
+#npuevmoqug .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4226,7 +4205,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#alexzgmwyq .gt_sourcenotes {
+#npuevmoqug .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4240,7 +4219,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#alexzgmwyq .gt_sourcenote {
+#npuevmoqug .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4248,72 +4227,72 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#alexzgmwyq .gt_left {
+#npuevmoqug .gt_left {
   text-align: left;
 }
 
-#alexzgmwyq .gt_center {
+#npuevmoqug .gt_center {
   text-align: center;
 }
 
-#alexzgmwyq .gt_right {
+#npuevmoqug .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#alexzgmwyq .gt_font_normal {
+#npuevmoqug .gt_font_normal {
   font-weight: normal;
 }
 
-#alexzgmwyq .gt_font_bold {
+#npuevmoqug .gt_font_bold {
   font-weight: bold;
 }
 
-#alexzgmwyq .gt_font_italic {
+#npuevmoqug .gt_font_italic {
   font-style: italic;
 }
 
-#alexzgmwyq .gt_super {
+#npuevmoqug .gt_super {
   font-size: 65%;
 }
 
-#alexzgmwyq .gt_footnote_marks {
+#npuevmoqug .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#alexzgmwyq .gt_asterisk {
+#npuevmoqug .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#alexzgmwyq .gt_indent_1 {
+#npuevmoqug .gt_indent_1 {
   text-indent: 5px;
 }
 
-#alexzgmwyq .gt_indent_2 {
+#npuevmoqug .gt_indent_2 {
   text-indent: 10px;
 }
 
-#alexzgmwyq .gt_indent_3 {
+#npuevmoqug .gt_indent_3 {
   text-indent: 15px;
 }
 
-#alexzgmwyq .gt_indent_4 {
+#npuevmoqug .gt_indent_4 {
   text-indent: 20px;
 }
 
-#alexzgmwyq .gt_indent_5 {
+#npuevmoqug .gt_indent_5 {
   text-indent: 25px;
 }
 
-#alexzgmwyq .katex-display {
+#npuevmoqug .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#alexzgmwyq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#npuevmoqug div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4508,23 +4487,23 @@ ventricular hypertrophy]</td>
 <span id="cb49-32"><a href="#cb49-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the gt table</span></span>
 <span id="cb49-33"><a href="#cb49-33" aria-hidden="true" tabindex="-1"></a>MLR_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="psqyzjjeud" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#psqyzjjeud table {
+<div id="gunktboaob" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gunktboaob table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#psqyzjjeud thead, #psqyzjjeud tbody, #psqyzjjeud tfoot, #psqyzjjeud tr, #psqyzjjeud td, #psqyzjjeud th {
+#gunktboaob thead, #gunktboaob tbody, #gunktboaob tfoot, #gunktboaob tr, #gunktboaob td, #gunktboaob th {
   border-style: none;
 }
 
-#psqyzjjeud p {
+#gunktboaob p {
   margin: 0;
   padding: 0;
 }
 
-#psqyzjjeud .gt_table {
+#gunktboaob .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4550,12 +4529,12 @@ ventricular hypertrophy]</td>
   border-left-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_caption {
+#gunktboaob .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#psqyzjjeud .gt_title {
+#gunktboaob .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4567,7 +4546,7 @@ ventricular hypertrophy]</td>
   border-bottom-width: 0;
 }
 
-#psqyzjjeud .gt_subtitle {
+#gunktboaob .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4579,7 +4558,7 @@ ventricular hypertrophy]</td>
   border-top-width: 0;
 }
 
-#psqyzjjeud .gt_heading {
+#gunktboaob .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4591,13 +4570,13 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_bottom_border {
+#gunktboaob .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_col_headings {
+#gunktboaob .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4612,7 +4591,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_col_heading {
+#gunktboaob .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4632,7 +4611,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#psqyzjjeud .gt_column_spanner_outer {
+#gunktboaob .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4644,15 +4623,15 @@ ventricular hypertrophy]</td>
   padding-right: 4px;
 }
 
-#psqyzjjeud .gt_column_spanner_outer:first-child {
+#gunktboaob .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#psqyzjjeud .gt_column_spanner_outer:last-child {
+#gunktboaob .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#psqyzjjeud .gt_column_spanner {
+#gunktboaob .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4664,11 +4643,11 @@ ventricular hypertrophy]</td>
   width: 100%;
 }
 
-#psqyzjjeud .gt_spanner_row {
+#gunktboaob .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#psqyzjjeud .gt_group_heading {
+#gunktboaob .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4694,7 +4673,7 @@ ventricular hypertrophy]</td>
   text-align: left;
 }
 
-#psqyzjjeud .gt_empty_group_heading {
+#gunktboaob .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4709,15 +4688,15 @@ ventricular hypertrophy]</td>
   vertical-align: middle;
 }
 
-#psqyzjjeud .gt_from_md > :first-child {
+#gunktboaob .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#psqyzjjeud .gt_from_md > :last-child {
+#gunktboaob .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#psqyzjjeud .gt_row {
+#gunktboaob .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4736,7 +4715,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#psqyzjjeud .gt_stub {
+#gunktboaob .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4749,7 +4728,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#psqyzjjeud .gt_stub_row_group {
+#gunktboaob .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4763,15 +4742,15 @@ ventricular hypertrophy]</td>
   vertical-align: top;
 }
 
-#psqyzjjeud .gt_row_group_first td {
+#gunktboaob .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#psqyzjjeud .gt_row_group_first th {
+#gunktboaob .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#psqyzjjeud .gt_summary_row {
+#gunktboaob .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4781,16 +4760,16 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#psqyzjjeud .gt_first_summary_row {
+#gunktboaob .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_first_summary_row.thick {
+#gunktboaob .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#psqyzjjeud .gt_last_summary_row {
+#gunktboaob .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4800,7 +4779,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_grand_summary_row {
+#gunktboaob .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4810,7 +4789,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#psqyzjjeud .gt_first_grand_summary_row {
+#gunktboaob .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4820,7 +4799,7 @@ ventricular hypertrophy]</td>
   border-top-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_last_grand_summary_row_top {
+#gunktboaob .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4830,11 +4809,11 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_striped {
+#gunktboaob .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#psqyzjjeud .gt_table_body {
+#gunktboaob .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4843,7 +4822,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_footnotes {
+#gunktboaob .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4857,7 +4836,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_footnote {
+#gunktboaob .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4866,7 +4845,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#psqyzjjeud .gt_sourcenotes {
+#gunktboaob .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4880,7 +4859,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#psqyzjjeud .gt_sourcenote {
+#gunktboaob .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4888,72 +4867,72 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#psqyzjjeud .gt_left {
+#gunktboaob .gt_left {
   text-align: left;
 }
 
-#psqyzjjeud .gt_center {
+#gunktboaob .gt_center {
   text-align: center;
 }
 
-#psqyzjjeud .gt_right {
+#gunktboaob .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#psqyzjjeud .gt_font_normal {
+#gunktboaob .gt_font_normal {
   font-weight: normal;
 }
 
-#psqyzjjeud .gt_font_bold {
+#gunktboaob .gt_font_bold {
   font-weight: bold;
 }
 
-#psqyzjjeud .gt_font_italic {
+#gunktboaob .gt_font_italic {
   font-style: italic;
 }
 
-#psqyzjjeud .gt_super {
+#gunktboaob .gt_super {
   font-size: 65%;
 }
 
-#psqyzjjeud .gt_footnote_marks {
+#gunktboaob .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#psqyzjjeud .gt_asterisk {
+#gunktboaob .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#psqyzjjeud .gt_indent_1 {
+#gunktboaob .gt_indent_1 {
   text-indent: 5px;
 }
 
-#psqyzjjeud .gt_indent_2 {
+#gunktboaob .gt_indent_2 {
   text-indent: 10px;
 }
 
-#psqyzjjeud .gt_indent_3 {
+#gunktboaob .gt_indent_3 {
   text-indent: 15px;
 }
 
-#psqyzjjeud .gt_indent_4 {
+#gunktboaob .gt_indent_4 {
   text-indent: 20px;
 }
 
-#psqyzjjeud .gt_indent_5 {
+#gunktboaob .gt_indent_5 {
   text-indent: 25px;
 }
 
-#psqyzjjeud .katex-display {
+#gunktboaob .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#psqyzjjeud div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gunktboaob div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5199,23 +5178,23 @@ ventricular hypertrophy]</td>
 <span id="cb50-65"><a href="#cb50-65" aria-hidden="true" tabindex="-1"></a><span class="co"># View the final table</span></span>
 <span id="cb50-66"><a href="#cb50-66" aria-hidden="true" tabindex="-1"></a>final_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="lfhyqwohjp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lfhyqwohjp table {
+<div id="gqvrcdjdmx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gqvrcdjdmx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lfhyqwohjp thead, #lfhyqwohjp tbody, #lfhyqwohjp tfoot, #lfhyqwohjp tr, #lfhyqwohjp td, #lfhyqwohjp th {
+#gqvrcdjdmx thead, #gqvrcdjdmx tbody, #gqvrcdjdmx tfoot, #gqvrcdjdmx tr, #gqvrcdjdmx td, #gqvrcdjdmx th {
   border-style: none;
 }
 
-#lfhyqwohjp p {
+#gqvrcdjdmx p {
   margin: 0;
   padding: 0;
 }
 
-#lfhyqwohjp .gt_table {
+#gqvrcdjdmx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5241,12 +5220,12 @@ ventricular hypertrophy]</td>
   border-left-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_caption {
+#gqvrcdjdmx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lfhyqwohjp .gt_title {
+#gqvrcdjdmx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5258,7 +5237,7 @@ ventricular hypertrophy]</td>
   border-bottom-width: 0;
 }
 
-#lfhyqwohjp .gt_subtitle {
+#gqvrcdjdmx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5270,7 +5249,7 @@ ventricular hypertrophy]</td>
   border-top-width: 0;
 }
 
-#lfhyqwohjp .gt_heading {
+#gqvrcdjdmx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5282,13 +5261,13 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_bottom_border {
+#gqvrcdjdmx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_col_headings {
+#gqvrcdjdmx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5303,7 +5282,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_col_heading {
+#gqvrcdjdmx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5323,7 +5302,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#lfhyqwohjp .gt_column_spanner_outer {
+#gqvrcdjdmx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5335,15 +5314,15 @@ ventricular hypertrophy]</td>
   padding-right: 4px;
 }
 
-#lfhyqwohjp .gt_column_spanner_outer:first-child {
+#gqvrcdjdmx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lfhyqwohjp .gt_column_spanner_outer:last-child {
+#gqvrcdjdmx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lfhyqwohjp .gt_column_spanner {
+#gqvrcdjdmx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5355,11 +5334,11 @@ ventricular hypertrophy]</td>
   width: 100%;
 }
 
-#lfhyqwohjp .gt_spanner_row {
+#gqvrcdjdmx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lfhyqwohjp .gt_group_heading {
+#gqvrcdjdmx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5385,7 +5364,7 @@ ventricular hypertrophy]</td>
   text-align: left;
 }
 
-#lfhyqwohjp .gt_empty_group_heading {
+#gqvrcdjdmx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5400,15 +5379,15 @@ ventricular hypertrophy]</td>
   vertical-align: middle;
 }
 
-#lfhyqwohjp .gt_from_md > :first-child {
+#gqvrcdjdmx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lfhyqwohjp .gt_from_md > :last-child {
+#gqvrcdjdmx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lfhyqwohjp .gt_row {
+#gqvrcdjdmx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5427,7 +5406,7 @@ ventricular hypertrophy]</td>
   overflow-x: hidden;
 }
 
-#lfhyqwohjp .gt_stub {
+#gqvrcdjdmx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5440,7 +5419,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#lfhyqwohjp .gt_stub_row_group {
+#gqvrcdjdmx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5454,15 +5433,15 @@ ventricular hypertrophy]</td>
   vertical-align: top;
 }
 
-#lfhyqwohjp .gt_row_group_first td {
+#gqvrcdjdmx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lfhyqwohjp .gt_row_group_first th {
+#gqvrcdjdmx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lfhyqwohjp .gt_summary_row {
+#gqvrcdjdmx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5472,16 +5451,16 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#lfhyqwohjp .gt_first_summary_row {
+#gqvrcdjdmx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_first_summary_row.thick {
+#gqvrcdjdmx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lfhyqwohjp .gt_last_summary_row {
+#gqvrcdjdmx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5491,7 +5470,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_grand_summary_row {
+#gqvrcdjdmx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5501,7 +5480,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#lfhyqwohjp .gt_first_grand_summary_row {
+#gqvrcdjdmx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5511,7 +5490,7 @@ ventricular hypertrophy]</td>
   border-top-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_last_grand_summary_row_top {
+#gqvrcdjdmx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5521,11 +5500,11 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_striped {
+#gqvrcdjdmx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lfhyqwohjp .gt_table_body {
+#gqvrcdjdmx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5534,7 +5513,7 @@ ventricular hypertrophy]</td>
   border-bottom-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_footnotes {
+#gqvrcdjdmx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5548,7 +5527,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_footnote {
+#gqvrcdjdmx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5557,7 +5536,7 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#lfhyqwohjp .gt_sourcenotes {
+#gqvrcdjdmx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5571,7 +5550,7 @@ ventricular hypertrophy]</td>
   border-right-color: #D3D3D3;
 }
 
-#lfhyqwohjp .gt_sourcenote {
+#gqvrcdjdmx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5579,72 +5558,72 @@ ventricular hypertrophy]</td>
   padding-right: 5px;
 }
 
-#lfhyqwohjp .gt_left {
+#gqvrcdjdmx .gt_left {
   text-align: left;
 }
 
-#lfhyqwohjp .gt_center {
+#gqvrcdjdmx .gt_center {
   text-align: center;
 }
 
-#lfhyqwohjp .gt_right {
+#gqvrcdjdmx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lfhyqwohjp .gt_font_normal {
+#gqvrcdjdmx .gt_font_normal {
   font-weight: normal;
 }
 
-#lfhyqwohjp .gt_font_bold {
+#gqvrcdjdmx .gt_font_bold {
   font-weight: bold;
 }
 
-#lfhyqwohjp .gt_font_italic {
+#gqvrcdjdmx .gt_font_italic {
   font-style: italic;
 }
 
-#lfhyqwohjp .gt_super {
+#gqvrcdjdmx .gt_super {
   font-size: 65%;
 }
 
-#lfhyqwohjp .gt_footnote_marks {
+#gqvrcdjdmx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lfhyqwohjp .gt_asterisk {
+#gqvrcdjdmx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lfhyqwohjp .gt_indent_1 {
+#gqvrcdjdmx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lfhyqwohjp .gt_indent_2 {
+#gqvrcdjdmx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lfhyqwohjp .gt_indent_3 {
+#gqvrcdjdmx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lfhyqwohjp .gt_indent_4 {
+#gqvrcdjdmx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lfhyqwohjp .gt_indent_5 {
+#gqvrcdjdmx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#lfhyqwohjp .katex-display {
+#gqvrcdjdmx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#lfhyqwohjp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gqvrcdjdmx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
