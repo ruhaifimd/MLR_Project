@@ -537,6 +537,30 @@ residual_value <- augment(final_model)
 residual_value
 ```
 
+Method : Standardized residuals\
+Keep standardized residuals between 2 and -2 (values above 2 or lower than −2 considered as influential observations)
+
+```{r}
+new_CHD <- 
+  residual_value %>% 
+  filter(.std.resid < 2 & .std.resid > -2 )
+```
+
+Re-run the Model with the non-influential observations (final model)
+
+```{r}
+final_model_new <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + resting_ecg + exercise_induced_angina,
+                   data = new_CHD,
+                   family = binomial)
+summary(final_model_new)
+```
+
+## **Diagnostic plot after removal of influental observation**
+
+```{r}
+plot(final_model_new)
+```
+
 ------------------------------------------------------------------------
 
 ## **Presentation**
