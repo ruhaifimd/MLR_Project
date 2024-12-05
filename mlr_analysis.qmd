@@ -99,27 +99,27 @@ library(dagitty)
 
 # Define the DAG
 DAG <- dagitty ('dag {
-chest pain type [pos="0.622,0.140"]
-cholesterol level [pos="0.224,0.384"]
-exercise-induced angina [pos="0.802,0.274"]
-resting BP [pos="0.408,0.519"]
-resting ECG [pos="0.591,0.586"]
-CHD [pos="0.816,0.467"]
-age [pos="0.263,0.120"]
-gender [pos="0.471,0.140"]
-chest pain type -> exercise-induced angina
-chest pain type -> resting ECG
-chest pain type -> CHD
-cholesterol level -> CHD
-exercise-induced angina -> CHD
-resting BP -> resting ECG
-resting BP -> CHD
-resting ECG -> CHD
-age -> cholesterol level
-age -> resting BP
+chest pain [pos="0.065,0.288"]
+chol [pos="0.147,0.192"]
+angina [pos="0.150,0.667"]
+BP [pos="0.639,0.179"]
+ECG [pos="0.490,0.685"]
+CHD [pos="0.367,0.330"]
+age [pos="0.210,0.039"]
+gender [pos="0.461,0.033"]
+chest pain -> angina
+chest pain -> ECG
+chest pain -> CHD
+chol -> CHD
+angina -> CHD
+BP -> resting ECG
+BP -> CHD
+ECG -> CHD
+age -> chol
+age -> BP
 age -> CHD
-gender -> cholesterol level
-gender -> resting BP
+gender -> chol
+gender -> BP
 gender -> CHD
 }')
 
@@ -517,6 +517,25 @@ Our model shows that:
 -   the area under the curve is **87.1%**. The values of above 70 are considered to have good discriminating effect. The CI is relatively narrow, suggesting a fairly precise estimation of the AUC.
 
 -   the p-values from the Hosmer Lemeshow is above 5% values (p=0.6062). This support our believe that our model has good fit.
+
+**Diagnostic plots**
+
+```{r}
+plot(final_model)
+```
+
+**Influential observations**
+
+```{r}
+infl <- influence.measures(final_model)
+```
+
+We use augment() to generate the residuals values
+
+```{r}
+residual_value <- augment(final_model)
+residual_value
+```
 
 ------------------------------------------------------------------------
 
