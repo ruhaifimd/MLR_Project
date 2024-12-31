@@ -1,5 +1,5 @@
-# MLR_Project
-# Multiple Logistic Regression Project
+
+# Multiple Logistic Regression
 
 This repository contains the files and analyses for an assignment on **Multiple Logistic Regression (MLR)** as part of the [Multivariable Analysis, Doctor of Public Health Program]. 
 
