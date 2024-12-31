@@ -1,12 +1,25 @@
 ---
 title: "Assignment Multiple Logistic Regression"
-format: html
+author: "Group 1"
+format:
+  html:
+      toc: true
+      toc-title: Contents
+      toc-location: left
+      toc-depth: 3
+      toc-expand: 1
+      number-sections: true
+      code-fold: true
+      code-summary: "Show the Code"
+      theme:
+        light: united
+        dark: cyborg
 editor: visual
 execute:
       warning: false
 ---
 
-## Group Members:
+## **Group Members:**
 
 1\) Muhammad Ruhaifi bin Muhammad Sabri (22305762)
 
@@ -28,8 +41,6 @@ execute:
 
 -   Research question
 
--   Variable selection
-
 -   Read data
 
 -   View data
@@ -50,19 +61,13 @@ execute:
 
 -   Interpretation
 
-------------------------------------------------------------------------
-
 ## **Introduction**
 
 We intend to analyze data related to cardiac features of patients from the "heart.xlsx" dataset. This dataset provides various information about patients, including age, gender, chest pain type, blood pressure, cholesterol levels, resting electrocardiographic (ECG) features, and more. We will attempt to create multivariate model to pinpoint the risk factors of heart disease as well as predict overall risk.
 
-------------------------------------------------------------------------
-
 ## **Methodology**
 
-We will use multiple logistic regression model approach to analyse predictors to explain variation of CHD in sample population. Variables will be selected based on a Directed Acyclic Graph (DAG). Following variable selection, the first model will consist of a univariate analysis of the selected variables. Second model consists of multivariate of the selected variables and another model will be constructed by adding interaction term between age and gender as there might be a non-additive effect of age and gender on the likelihood of CHD, meaning the combined effect of these two variables is not simply the sum of their separate effects. Model comparison will be executed using anova test to select the final model. Model assessment will be conducted by running the diagnostic plot and checking the model for any influential observation before final model is concluded.
-
-------------------------------------------------------------------------
+We will use multiple logistic regression model approach to analyse predictors to explain variation of CHD in sample population. The first model will consist of a univariate analysis of the selected variables. Second model consists of multivariate of the selected variables and another model will be constructed by adding interaction term between age and gender as there might be a non-additive effect of age and gender on the likelihood of CHD, meaning the combined effect of these two variables is not simply the sum of their separate effects. Model comparison will be executed using anova test to select the final model. Model assessment will be conducted by running the diagnostic plot and checking the model for any influential observation before final model is concluded.
 
 ## **Prepare Data**
 
@@ -85,50 +90,9 @@ library(sjPlot)
 library(performance)
 ```
 
-------------------------------------------------------------------------
-
 ## **Research Question**
 
 Is there any association between age, gender, chest pain type, resting blood pressure, cholesterol level, resting ECG, and exercise-induced angina with CHD in an adult population?
-
-------------------------------------------------------------------------
-
-## **Variable Selection**
-
-```{r}
-# Load the dagitty package
-library(dagitty)
-
-# Define the DAG
-DAG <- dagitty ('dag {
-chest pain [pos="0.065,0.288"]
-chol [pos="0.147,0.192"]
-angina [pos="0.150,0.667"]
-BP [pos="0.639,0.179"]
-ECG [pos="0.490,0.685"]
-CHD [pos="0.367,0.330"]
-age [pos="0.210,0.039"]
-gender [pos="0.461,0.033"]
-chest pain -> angina
-chest pain -> ECG
-chest pain -> CHD
-chol -> CHD
-angina -> CHD
-BP -> resting ECG
-BP -> CHD
-ECG -> CHD
-age -> chol
-age -> BP
-age -> CHD
-gender -> chol
-gender -> BP
-gender -> CHD
-}')
-
-# Visualize the DAG
-plot(DAG)
-
-```
 
 ## **Read Data**
 
@@ -137,16 +101,12 @@ library(readxl)
 CHD <- read_excel("heart.xlsx")
 ```
 
-------------------------------------------------------------------------
-
 ## **View Data**
 
 ```{r}
 library(dplyr)
 glimpse(CHD)
 ```
-
-------------------------------------------------------------------------
 
 ## **Describe Data**
 
@@ -160,8 +120,6 @@ CHD %>%
 
 summary(CHD)
 ```
-
-------------------------------------------------------------------------
 
 ## **Explore Data**
 
@@ -205,8 +163,6 @@ For **continuous data**: We employ histograms to gain insight into the distribut
            fill = "CHD Status") +
       theme_minimal()
     ```
-
-------------------------------------------------------------------------
 
 For **categorical data**: Bar plots are utilized to visualize the frequency of each category. This provides a clear representation of the prominence of each category within the respective feature.
 
@@ -261,8 +217,6 @@ For **categorical data**: Bar plots are utilized to visualize the frequency of e
            fill = "CHD Status") +
       theme_minimal()
     ```
-
-------------------------------------------------------------------------
 
 ## **Estimation**
 
@@ -366,8 +320,6 @@ SLR_table <- tbl_stack(
 SLR_table
 ```
 
-------------------------------------------------------------------------
-
 ### **Multiple Logistic Regression Without Interaction Model (Model A)**
 
 Model A: MLR without interaction with CHD
@@ -380,8 +332,6 @@ MLR_modA <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + r
            data = CHD)
 tab_model(MLR_modA)
 ```
-
-------------------------------------------------------------------------
 
 ### **Multiple Logistic Regression With Interaction Model (Model B)**
 
@@ -397,8 +347,6 @@ MLR_modB <- glm(CHD ~ age + gender + chest_pain_type + blood_pressure + chol + r
            data = CHD)
 tab_model(MLR_modB)
 ```
-
-------------------------------------------------------------------------
 
 ## **Model Selection**
 
@@ -428,8 +376,6 @@ print(vif_MLR_final)
 
 All VIF values are close to 1, which is well below the common thresholds of 5 or 10 that indicate multicollinearity. This suggest that there is **no significant multicollinearity** among the predictors in the model.
 
-------------------------------------------------------------------------
-
 ## **Variables Importance**
 
 ```{r}
@@ -442,8 +388,6 @@ vip(rf)
 ```
 
 The plot highlights that **chest pain type**, **age, and cholesterol level** are the most influential predictors, meaning they have the greatest impact on predicting the outcome. On the other hand, variables like **blood pressure**, **exercise-induced angina**, **gender** and **resting ECG** have less influence in comparison.
-
-------------------------------------------------------------------------
 
 ## **Prediction**
 
@@ -467,8 +411,6 @@ library(broom)
 fitted_values_m <- augment(final_model, type.predict = 'response')
 fitted_values_m
 ```
-
-------------------------------------------------------------------------
 
 ## **Model Checking**
 
@@ -568,8 +510,6 @@ tab_model(final_model_new)
 check_model(final_model_new)
 ```
 
-------------------------------------------------------------------------
-
 ## **Presentation**
 
 1\) Descriptive analysis
@@ -598,7 +538,7 @@ For each unit increase or decrease of X, there will be increase/decrease of log 
 ```{r}
 # final_model is your multivariable model
 # Create the table and convert it to gt
-MLR_table <- tbl_regression(final_model, exponentiate = TRUE) %>%
+MLR_table <- tbl_regression(final_model_new, exponentiate = TRUE) %>%
   bold_labels() %>%
   italicize_levels() %>%
   as_gt() %>%
@@ -702,8 +642,6 @@ final_table <- final_table %>%
 final_table
 ```
 
-------------------------------------------------------------------------
-
 ## **Interpretation**
 
 ```{r}
@@ -727,3 +665,7 @@ extract_eq(final_model, use_coefs = TRUE)
 -   The presence of ST-T wave abnormalities was associated with reduced odds of the outcome in the univariate model (OR: 0.50; 95% CI: 0.32–0.80, p-value = 0.003). However, this variable was not significant in the multivariable model (OR: 0.63; 95% CI: 0.34–1.16, p-value = 0.14). The loss of significance indicates potential confounding effects from other predictors.
 
 -   Both cholesterol levels and left ventricular hypertrophy were not significant predictors in either univariate or multivariable models, indicating limited predictive value for the outcome in this dataset.
+
+## **Github Repo**
+
+Feel free to visit our repo: <https://github.com/ruhaifimd/MLR_Project.git>
